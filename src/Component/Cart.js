@@ -15,7 +15,7 @@ const Cart = () => {
   console.log(data);
 
   return (
-    <div>
+    <MainParent>
       {data.map((product) => {
         return (
           <Parent>
@@ -32,16 +32,19 @@ const Cart = () => {
           </Parent>
         );
       })}
-    </div>
+    </MainParent>
   );
 };
 
 export default Cart;
-
-const Parent = styled.div`
+const MainParent = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  // margin-top: 55px;
+`;
+const Parent = styled.div`
+  margin: 55px auto 10px auto;
 `;
 
 const Main = styled.div`

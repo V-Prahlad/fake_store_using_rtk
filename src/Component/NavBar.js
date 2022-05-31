@@ -10,7 +10,7 @@ const NavBar = () => {
   return (
     <Nav>
       <Logo>
-        <Link to="/">Doidde Store</Link>
+        <Link to="/">JH Store</Link>
       </Logo>
       <Cart>
         <SubCart>
@@ -34,6 +34,9 @@ const Nav = styled.div`
   display: flex;
   height: 60px;
   justify-content: space-between;
+  position: fixed;
+  z-index: 12233;
+  width: 100%;
 
   a {
     text-decoration: none;

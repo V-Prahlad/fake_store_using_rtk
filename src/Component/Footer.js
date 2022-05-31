@@ -12,11 +12,10 @@ const Footer = () => {
 export default Footer;
 
 const Fstyle = styled.div`
-  align-items: center;
-  background-color: yellow;
-  color: red;
-  display: flex;
   height: 50px;
+  background-color: yellow;
+  display: flex;
   justify-content: center;
-  width: 100vw;
+  align-items: center;
+  color: Black;
 `;
