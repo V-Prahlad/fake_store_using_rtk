@@ -11,16 +11,14 @@ import "./global.css";
 function App() {
   return (
     <div>
-      <Provider store={store}>
-        <BrowserRouter>
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/cart" exact element={<Cart />} />
-          </Routes>
-          <Footer />
-        </BrowserRouter>
-      </Provider>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" exact element={<Cart />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

@@ -1,14 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import CartLogo from "../asset/cart.png";
 
 const NavBar = () => {
   const cart = useSelector((state) => state.cartReducer);
-  console.log(cart.length);
+
   return (
     <Nav>
-      <Logo>Doidde Store</Logo>
-      <Cart> {cart.length}</Cart>
+      <Logo>
+        <Link to="/">Doidde Store</Link>
+      </Logo>
+      <Cart>
+        <SubCart>
+          <Link to="/cart">
+            <img src={CartLogo} alt="" />
+          </Link>
+          <span>{cart.length}</span>
+        </SubCart>
+      </Cart>
     </Nav>
   );
 };
@@ -23,6 +34,10 @@ const Nav = styled.div`
   display: flex;
   height: 60px;
   justify-content: space-between;
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 const Logo = styled.div`
@@ -31,6 +46,30 @@ const Logo = styled.div`
 `;
 
 const Cart = styled.div`
-  font-size: 20px;
-  margin-right: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  mrgin-right: 20px;
+  position: relative;
+
+  img {
+    height: 60px;
+    width: 60px;
+  }
+
+  span {
+    border-radius: 50%;
+    position: absolute;
+    right: 45px;
+    color: #4e944f;
+    top: 9px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+`;
+
+const SubCart = styled.div`
+  margin-left: 20px;
 `;
