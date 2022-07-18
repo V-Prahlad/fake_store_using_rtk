@@ -3,8 +3,6 @@ import Cart from "./Component/Cart";
 import Footer from "./Component/Footer";
 import Home from "./Component/Home";
 import NavBar from "./Component/NavBar";
-import store from "./redux/store";
-import { Provider } from "react-redux";
 
 import "./global.css";
 

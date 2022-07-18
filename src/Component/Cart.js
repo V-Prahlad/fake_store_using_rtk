@@ -2,7 +2,6 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { remove } from "../redux/cartSlice";
-import Product from "./Product";
 
 const Cart = () => {
   const dipatch = useDispatch();
@@ -12,16 +11,14 @@ const Cart = () => {
     dipatch(remove(product));
   };
 
-  console.log(data);
-
   return (
     <MainParent>
       {data.map((product) => {
         return (
-          <Parent>
+          <Parent key={product.id}>
             <Main>
               <div>
-                <img src={product?.images[0]} alt="" />
+                <img src={product?.images[0]} alt='' />
               </div>
               <Title>{product?.title}</Title>
               <Price>₹ {product?.price} Only</Price>

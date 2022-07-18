@@ -40,6 +40,10 @@ const Main = styled.div`
     height: 114px;
     margin-left: 46px;
     width: 136px;
+    &:hover {
+      width: 140px;
+      height: 114.5px;
+    }
   }
 
   button {
@@ -51,6 +55,9 @@ const Main = styled.div`
     padding: 9px 10px;
     position: relative;
     top: 17px;
+    &:hover {
+      background: #446a46;
+    }
   }
 `;
 
